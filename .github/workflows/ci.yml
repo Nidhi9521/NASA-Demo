@@ -1,15 +1,15 @@
 name: NASA Project CI
 on:
   push:
-    branches: [ master ]
+    branches: [ master , main]
   pull_request:
-    branches: [ master ]
+    branches: [ master , main ]
 jobs:
   build:
     strategy:
       matrix:
         node-version: [14.x, 16.x]
-    runs-on: mac-os
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js version ${{ matrix.node-version }}
