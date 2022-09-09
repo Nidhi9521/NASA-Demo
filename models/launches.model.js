@@ -28,7 +28,7 @@ function getAllLaunch() {
 
 function addNewLaunch(launch) {
   latestFlightNumber=latestFlightNumber+1;
-console.log(launch);
+  console.log(launch);
   launches.set(latestFlightNumber, Object.assign(launch, {
     upcoming: true,
     sucess: true,
